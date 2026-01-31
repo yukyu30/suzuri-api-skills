@@ -8,80 +8,6 @@ allowed-tools: Read, Write, Edit, Bash
 
 SUZURI APIの完全ガイド。全エンドポイントとその使い方を網羅。
 
-## API Map（エンドポイント一覧）
-
-### 認証 (Auth)
-
-| メソッド | エンドポイント | 機能 |
-|----------|----------------|------|
-| GET | `/oauth/authorize` | 認可リクエスト |
-| POST | `/oauth/token` | トークン取得 |
-
-### アクティビティ (Activity)
-
-| メソッド | エンドポイント | 機能 |
-|----------|----------------|------|
-| GET | `/api/v1/activities` | できごとリスト取得 |
-| GET | `/api/v1/activities/unreads` | 未読数取得 |
-
-### オモイデ (Choice)
-
-| メソッド | エンドポイント | 機能 |
-|----------|----------------|------|
-| GET | `/api/v1/choices` | リスト取得 |
-| GET | `/api/v1/choices/{id}` | 情報取得 |
-| POST | `/api/v1/choices` | 作成 |
-| PUT | `/api/v1/choices/{id}` | 更新 |
-| DELETE | `/api/v1/choices/{id}` | 削除 |
-| POST | `/api/v1/choices/{id}` | 商品追加 |
-| POST | `/api/v1/choices/{id}/remove` | 商品削除 |
-
-### ズッキュン (Favorite)
-
-| メソッド | エンドポイント | 機能 |
-|----------|----------------|------|
-| GET | `/api/v1/products/{id}/favorites` | 商品へのズッキュン取得 |
-| GET | `/api/v1/users/{id}/favorites` | ユーザのズッキュン取得 |
-| POST | `/api/v1/products/{id}/favorites` | ズッキュン作成 |
-| DELETE | `/api/v1/products/{id}/favorites` | ズッキュン削除 |
-
-### アイテム (Item)
-
-| メソッド | エンドポイント | 機能 |
-|----------|----------------|------|
-| GET | `/api/v1/items` | アイテムリスト取得 |
-
-### 素材 (Material)
-
-| メソッド | エンドポイント | 機能 |
-|----------|----------------|------|
-| GET | `/api/v1/materials` | リスト取得 |
-| POST | `/api/v1/materials` | 作成 |
-| PUT | `/api/v1/materials/{id}` | 更新 |
-| DELETE | `/api/v1/materials/{id}` | 削除 |
-| POST | `/api/v1/materials/text` | テキストから作成 |
-
-### 商品 (Product)
-
-| メソッド | エンドポイント | 機能 |
-|----------|----------------|------|
-| GET | `/api/v1/products` | リスト取得 |
-| GET | `/api/v1/products/{id}` | 情報取得 |
-| GET | `/api/v1/products/search` | 検索 |
-| GET | `/api/v1/products/on_sale` | セール商品取得 |
-| GET | `/api/v1/choices/{id}/products` | Choice内商品取得 |
-
-### ユーザー (User)
-
-| メソッド | エンドポイント | 機能 |
-|----------|----------------|------|
-| GET | `/api/v1/user` | 認証ユーザ情報取得 |
-| PUT | `/api/v1/user` | 認証ユーザ情報更新 |
-| GET | `/api/v1/users` | ユーザーリスト取得 |
-| GET | `/api/v1/users/{id}` | ユーザー情報取得 |
-
----
-
 ## 認証 (Authentication)
 
 SUZURI APIは2つの認証方式をサポート。
@@ -549,3 +475,77 @@ curl -X POST -H "Authorization: Bearer $SUZURI_API_TOKEN" \
 
 - [SUZURI API公式ドキュメント](https://suzuri.jp/developer/documentation/v1)
 - [SUZURI API Tips集](https://zenn.dev/yu_9/articles/7d372e293b260e)
+
+---
+
+## API Map（エンドポイント一覧）
+
+### 認証 (Auth)
+
+| メソッド | エンドポイント | 機能 |
+|----------|----------------|------|
+| GET | `/oauth/authorize` | 認可リクエスト |
+| POST | `/oauth/token` | トークン取得 |
+
+### アクティビティ (Activity)
+
+| メソッド | エンドポイント | 機能 |
+|----------|----------------|------|
+| GET | `/api/v1/activities` | できごとリスト取得 |
+| GET | `/api/v1/activities/unreads` | 未読数取得 |
+
+### オモイデ (Choice)
+
+| メソッド | エンドポイント | 機能 |
+|----------|----------------|------|
+| GET | `/api/v1/choices` | リスト取得 |
+| GET | `/api/v1/choices/{id}` | 情報取得 |
+| POST | `/api/v1/choices` | 作成 |
+| PUT | `/api/v1/choices/{id}` | 更新 |
+| DELETE | `/api/v1/choices/{id}` | 削除 |
+| POST | `/api/v1/choices/{id}` | 商品追加 |
+| POST | `/api/v1/choices/{id}/remove` | 商品削除 |
+
+### ズッキュン (Favorite)
+
+| メソッド | エンドポイント | 機能 |
+|----------|----------------|------|
+| GET | `/api/v1/products/{id}/favorites` | 商品へのズッキュン取得 |
+| GET | `/api/v1/users/{id}/favorites` | ユーザのズッキュン取得 |
+| POST | `/api/v1/products/{id}/favorites` | ズッキュン作成 |
+| DELETE | `/api/v1/products/{id}/favorites` | ズッキュン削除 |
+
+### アイテム (Item)
+
+| メソッド | エンドポイント | 機能 |
+|----------|----------------|------|
+| GET | `/api/v1/items` | アイテムリスト取得 |
+
+### 素材 (Material)
+
+| メソッド | エンドポイント | 機能 |
+|----------|----------------|------|
+| GET | `/api/v1/materials` | リスト取得 |
+| POST | `/api/v1/materials` | 作成 |
+| PUT | `/api/v1/materials/{id}` | 更新 |
+| DELETE | `/api/v1/materials/{id}` | 削除 |
+| POST | `/api/v1/materials/text` | テキストから作成 |
+
+### 商品 (Product)
+
+| メソッド | エンドポイント | 機能 |
+|----------|----------------|------|
+| GET | `/api/v1/products` | リスト取得 |
+| GET | `/api/v1/products/{id}` | 情報取得 |
+| GET | `/api/v1/products/search` | 検索 |
+| GET | `/api/v1/products/on_sale` | セール商品取得 |
+| GET | `/api/v1/choices/{id}/products` | Choice内商品取得 |
+
+### ユーザー (User)
+
+| メソッド | エンドポイント | 機能 |
+|----------|----------------|------|
+| GET | `/api/v1/user` | 認証ユーザ情報取得 |
+| PUT | `/api/v1/user` | 認証ユーザ情報更新 |
+| GET | `/api/v1/users` | ユーザーリスト取得 |
+| GET | `/api/v1/users/{id}` | ユーザー情報取得 |
