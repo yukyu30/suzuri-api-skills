@@ -10,16 +10,23 @@ SUZURI API特化スキル集。グッズ作成、商品管理、認証設定を�
 
 常に日本語で返答してください。
 
+## API Map
+
+**[suzuri-api-map.md](suzuri-api-map.md)** - 全エンドポイントとスキルの対応表
+
 ## Available Skills
 
-### suzuri-auth
-SUZURI APIの認証設定。APIキー取得、OAuth設定、トークン管理。
-
-### suzuri-product-create
-画像からSUZURIグッズを作成。Tシャツ、パーカー、マグカップなど。
-
-### suzuri-product-manage
-商品の一覧取得、検索、更新、削除。
+| スキル | 機能 |
+|--------|------|
+| [suzuri-auth](skills/suzuri-auth/SKILL.md) | 認証設定（APIキー、OAuth） |
+| [suzuri-activity](skills/suzuri-activity/SKILL.md) | アクティビティ（通知） |
+| [suzuri-choice](skills/suzuri-choice/SKILL.md) | オモイデ（コレクション） |
+| [suzuri-favorite](skills/suzuri-favorite/SKILL.md) | ズッキュン（お気に入り） |
+| [suzuri-item](skills/suzuri-item/SKILL.md) | アイテム情報 |
+| [suzuri-material](skills/suzuri-material/SKILL.md) | 素材管理 |
+| [suzuri-product-create](skills/suzuri-product-create/SKILL.md) | 商品作成 |
+| [suzuri-product-manage](skills/suzuri-product-manage/SKILL.md) | 商品管理 |
+| [suzuri-user](skills/suzuri-user/SKILL.md) | ユーザー管理 |
 
 ## API Reference
 
