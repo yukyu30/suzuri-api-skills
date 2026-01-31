@@ -1,0 +1,9 @@
+{
+  "name": "suzuri-skills",
+  "description": "SUZURI API特化スキル集。グッズ作成、商品管理、認証設定をサポート",
+  "version": "1.0.0",
+  "author": {
+    "name": "yukyu30"
+  },
+  "skills": "./skills/"
+}
