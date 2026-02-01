@@ -1,6 +1,6 @@
 {
-  "name": "suzuri-skills",
-  "description": "SUZURI API特化スキル集。グッズ作成、商品管理、認証設定をサポート",
+  "name": "suzuri-api-guide",
+  "description": "SUZURI API完全ガイド。認証設定、グッズ作成、商品管理、素材管理など全APIエンドポイントをサポート",
   "version": "1.0.0",
   "author": {
     "name": "yukyu30"
